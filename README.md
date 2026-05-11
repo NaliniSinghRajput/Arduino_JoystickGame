@@ -62,6 +62,5 @@ PORT = "COM4"
 ## Project Files
 
 - `spaceship_game.py` - Main game file
-- `joystick_test.py` - Test file for checking joystick values
 - `requirements.txt` - Required Python libraries
 - `.gitignore` - Files and folders ignored by Git
