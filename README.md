@@ -1,14 +1,14 @@
 # Arduino Joystick Spaceship Game
 
-This is a Python Pygame spaceship shooter game controlled using an Arduino Micro and a joystick module.
+This is a Python spaceship shooter game controlled using an Arduino Micro and a joystick module.
 
 ## Features
 
-- Arduino joystick controls spaceship movement
-- Joystick button fires bullets
+- Move spaceship using joystick
+- Shoot bullets using joystick button
 - Enemy balls/asteroids fall from the top
-- Player can shoot and destroy enemies
 - Score and lives system
+- Built using Python, Pygame, PySerial, and Arduino
 
 ## Hardware Required
 
@@ -23,13 +23,45 @@ This is a Python Pygame spaceship shooter game controlled using an Arduino Micro
 |---|---|
 | VCC | 5V |
 | GND | GND |
-| VRx | A0 |
-| VRy | A1 |
-| SW | D2 |
+| VRx / X | A0 |
+| VRy / Y | A1 |
+| SW / Button | D2 |
 
 ## Python Libraries Required
 
-Install the required libraries:
+Install the required libraries using:
 
 ```bash
 pip install -r requirements.txt
+```
+
+## How to Run
+
+First, close the Arduino Serial Monitor.
+
+Then run:
+
+```bash
+python spaceship_game.py
+```
+
+## Important
+
+Change the COM port in the Python file if required:
+
+```python
+PORT = "COM3"
+```
+
+For example, if your Arduino is on COM4, change it to:
+
+```python
+PORT = "COM4"
+```
+
+## Project Files
+
+- `spaceship_game.py` - Main game file
+- `joystick_test.py` - Test file for checking joystick values
+- `requirements.txt` - Required Python libraries
+- `.gitignore` - Files and folders ignored by Git
